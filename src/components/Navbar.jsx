@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../css/navbar.css";
+import imagenPortada from "../assets/descarga1.jpg"
 
 const Navbar = () => {
   return (
@@ -11,8 +12,9 @@ const Navbar = () => {
             isActive ? "nav-link fw-bold" : "nav-link"
           }
           to="/"
-        >
-          El Rincon del Sabor
+        ><div className="imgLogo">
+          <img src={imagenPortada} alt="" />
+          </div>
         </NavLink>
         <button
           className="navbar-toggler"
@@ -23,7 +25,7 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon "></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
