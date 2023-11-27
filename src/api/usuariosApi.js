@@ -1,4 +1,4 @@
-const url = "...";
+const url ="https://rincondelsaborbd-dev-ssmt.4.us-1.fl0.io/api/usuarios" ;
 
 const usuarioAdd = async (datos) => {
   const resp = await fetch(url, {

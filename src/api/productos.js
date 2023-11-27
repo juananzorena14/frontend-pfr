@@ -1,4 +1,4 @@
-const url = "https://rincondelsaborbd-dev-ssmt.4.us-1.fl0.io/";
+const url = "https://rincondelsaborbd-dev-ssmt.4.us-1.fl0.io/api/productos";
 // const token = JSON.parse(localStorage.getItem("token")) || null;
 
 const listaProducto = async () => {

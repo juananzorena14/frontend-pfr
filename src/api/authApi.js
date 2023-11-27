@@ -1,4 +1,4 @@
-const url = "...";
+const url = "https://rincondelsaborbd-dev-ssmt.4.us-1.fl0.io/api/auth";
 
 export const login = async (datos) => {
   const res = await fetch(url + "/login", {

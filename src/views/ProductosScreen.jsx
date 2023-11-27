@@ -36,21 +36,21 @@ const ProductosScreen = () => {
 {/* ---------------------esto agrege yo imagen portada --------------------*/}
             <div className="row mt-1 d-flex">
             <div className="col-12 col-md portada  ">
-              <div className="mt-3">
-                <h3 className="texto mb-2">El Rincon del Sabor</h3>
+              <div className="mt-3 ">
+                <h3 className="texto mb-2 mt-5 me-8">El Rincon del Sabor</h3>
                 <p className="texto">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Commodi vitae libero quae, dolor aliquam in!
+                  Lorem ipsum dolor sit amet <br /> consectetur adipisicing elit.
+                  Commodi vitae <br /> libero quae, dolor aliquam in!
                 </p>
               </div>
 
-              <div className="">
+              {/* <div className="">
                 <img
                   src={imagenPortada}
                   className="card-img w-100 "
                   alt="imagen portada"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
 
