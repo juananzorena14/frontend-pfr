@@ -13,11 +13,11 @@ const Navbar = () => {
           }
           to="/"
         ><div className="imgLogo">
-          <img src={imagenPortada} alt="" />
+          <img src={imagenPortada} alt="portada" />
           </div>
         </NavLink>
         <button
-          className="navbar-toggler btn btn-light "
+          className="navbar-toggler light "
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -25,7 +25,7 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon "></span>
+          <span className="navbar-toggler-icon menu-icon "></span>
         </button>
         <div className="collapse navbar-collapse  " id="navbarNav">
           <ul className="navbar-nav">

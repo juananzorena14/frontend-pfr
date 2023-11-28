@@ -2,8 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { usuarioAdd } from "../api/usuariosApi";
 import "../css/register.css";
-import pedidosYa from "../assets/pedidos-ya.png";
-
+import pedidosYa from "../assets/pedidos-ya.jpg";
 
 const RegistroUsuarioApp = () => {
   const {
@@ -22,7 +21,7 @@ const RegistroUsuarioApp = () => {
     <>
       <div className="container-fluid fondo">
         <div className="row align-items-center">
-          <div className="col-12 col-md transparente">
+          <div class=" col-12 transparente">
             <form
               noValidate
               onSubmit={handleSubmit(newUser)}
@@ -105,17 +104,11 @@ const RegistroUsuarioApp = () => {
               </div>
             </form>
           </div>
-          
+          </div>
 
-          <div className="col-6  ">
-            <div class="card  publicidad">
-              <img src={pedidosYa} class="card-img-top" alt="publicidad" />
-            </div>
-          </div>
-            
-          </div>
-        </div>
-      
+       
+        
+      </div>
     </>
   );
 };

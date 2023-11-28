@@ -36,8 +36,8 @@ const ProductosScreen = () => {
          
             <div className="col-12 col-md portada   ">
               <div className=" col-4 col-md-5 mt-3 ">
-                <h3 className="text-end texto fs-2">El Rincon del Sabor</h3>
-                <p className="text-end texto fs-4">
+                <h3 className="text-end texto fst-italic fs-2">El Rincon del Sabor</h3>
+                <p className="text-end texto fst-italic fs-4">
                 Donde cada bocado es un viaje de sabores.
                 </p>
               </div>

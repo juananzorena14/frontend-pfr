@@ -3,9 +3,10 @@ import '../css/footer.css'
 
 const Footer = () => {
   const redesSociales = [
-    { name: 'Facebook', url: 'https://www.facebook.com/tu-restaurante' },
-    { name: 'Twitter', url: 'https://twitter.com/tu-restaurante' },
-    { name: 'Instagram', url: 'https://www.instagram.com/tu-restaurante' },
+    { nombre: "Facebook" ,icono:'fa-facebook', url: 'https://www.facebook.com/tu-restaurante' },
+    { nombre: 'Twitter',icono:'fa-instagram', url: 'https://twitter.com/tu-restaurante' },
+    { nombre: 'Instagram',icono:'fa-twitter', url: 'https://www.instagram.com/tu-restaurante' },
+    { nombre: 'Whatsapp',icono:'fa-whatsapp', url: 'https://www.whatsapp.com/tu-restaurante' },
   ];
 
   return (
@@ -14,8 +15,10 @@ const Footer = () => {
       <ul className="redes-css">
         {redesSociales.map((redesSociales, index) => (
           <li key={index}>
-            <a href={redesSociales.url} target="_blank" rel="noopener noreferrer">
-              {redesSociales.name}
+            <a href={redesSociales.url} target="_blank" rel="redes sociales"> 
+            <i class={`fa ${redesSociales.icono} fa-2x  text-light`}aria-hidden="true"></i>
+            
+              {/* {redesSociales.name} */}
             </a>
           </li>
         ))}
@@ -26,3 +29,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
