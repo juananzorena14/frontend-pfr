@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { login } from "../api/authApi";
 
+import '../css/login.css'
+
 const LoginScreen = () => {
   const navigate = useNavigate();
 
@@ -30,15 +32,15 @@ const LoginScreen = () => {
   };
 
   return (
-    <div className="container">
-      <div className="row vh-100 d-flex align-items-center">
-        <div className="col-12 col-md-6 offset-md-3">
-          <div className="card">
+    <div className="container-fluid fondo ">
+      <div className="row  d-flex vh-100 align-items-center">
+        <div className="col-12 col-md ">
+          <div className="card transparente">
             <div className="card-body">
               <form
                 noValidate
                 onSubmit={handleSubmit(inicioSesion)}
-                className="bg-light text-dark p-3 rounded w-100"
+                className="bg-light text-dark p-3 rounded w-100 "
               >
                 <h1 className="text-center">Inicio de sesión</h1>
                 <section className="row">
@@ -94,7 +96,9 @@ const LoginScreen = () => {
             </div>
           </div>
         </div>
+
       </div>
+
       {loginUser?.msg && (
         <div className="row mt-3">
           <div className="col">

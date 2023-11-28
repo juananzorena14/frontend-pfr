@@ -9,6 +9,10 @@
     padding: 20px;
   
 }
+.navbar-toggler{
+    background-color: #fff;
+
+}
 
 
 .div-a a{
@@ -20,9 +24,7 @@
     font-size: 1.5rem;
    color:rgb(244, 223, 200);
 }
-.div-a button{
-    color: white;
-}
+
 
 .imgLogo {
     width: 140px;
@@ -37,3 +39,4 @@
     top: 0px;
    
    } 
+ 

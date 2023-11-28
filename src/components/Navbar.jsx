@@ -5,7 +5,7 @@ import imagenPortada from "../assets/descarga1.jpg"
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-css">
+    <nav className="navbar navbar-expand-lg navbar-css ">
       <div className="container-fluid div-a">
         <NavLink
           className={({ isActive }) =>
@@ -17,7 +17,7 @@ const Navbar = () => {
           </div>
         </NavLink>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler btn btn-light "
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -27,7 +27,7 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon "></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className="collapse navbar-collapse  " id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
               <NavLink
