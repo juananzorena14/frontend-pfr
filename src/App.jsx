@@ -10,7 +10,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ProductosScreen from "./views/ProductosScreen";
 import ErrorScreen from "./views/ErrorScreen";
-
+import ModalLogin from "./components/ModalLogin"
 
 
 
@@ -21,7 +21,7 @@ function App() {
       <Routes>
         <Route path="/*" element= {<ProtectedRoutes><RouterPrimary/></ProtectedRoutes>}/>
         <Route path="/landing" element={<LandingPage/>}/>
-        <Route path="/login" element={<LoginScreen/>}/> 
+        <Route path="/login" element={<ModalLogin/>}/> 
         <Route path="/register" element={<RegistroUsuarioApp/>}/> 
         <Route path="/pay" element={<CardBuyApp/>}/>       
         <Route path="*" element={<ErrorScreen />} />

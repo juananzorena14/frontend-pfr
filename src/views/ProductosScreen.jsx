@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { listaProducto } from "../api/productos";
+import { productsList } from "../api/productsApi";
 import imagenPortada from "../assets/portad.jpg";
 import '../css/tarjetasPrincipal.css'
 
@@ -16,7 +16,7 @@ const ProductosScreen = () => {
 
   const traerProductosFiltrados = async () => {
     //ejecutaria getProductos para traer todos los productos
-    const { productos } = await listaProducto();
+    const { productos } = await productsList();
 
     const productosFiltrados = productos.filter((produc) => {
       return produc.categoria === categoria;
