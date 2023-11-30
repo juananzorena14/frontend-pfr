@@ -10,24 +10,28 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ProductosScreen from "./views/ProductosScreen";
 import ErrorScreen from "./views/ErrorScreen";
-import ModalLogin from "./components/ModalLogin"
-
-
+import CarritoScreen from "./views/CarritoScreen";
 
 function App() {
   return (
     <BrowserRouter>
-     <Navbar/>
+      <Navbar />
       <Routes>
-        <Route path="/*" element= {<ProtectedRoutes><RouterPrimary/></ProtectedRoutes>}/>
-        <Route path="/landing" element={<LandingPage/>}/>
-        <Route path="/login" element={<ModalLogin/>}/> 
-        <Route path="/register" element={<RegistroUsuarioApp/>}/> 
-        <Route path="/pay" element={<CardBuyApp/>}/>       
-        <Route path="*" element={<ErrorScreen />} />
-        <Route path="/" element={<ProductosScreen />} />
-            
+        {/* <Route
+          path="/*"
+          element={
+            <ProtectedRoutes>
+              <RouterPrimary />
+            </ProtectedRoutes>
+          }
+        /> */}
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/pay" element={<CardBuyApp/>}/>
+        <Route path="/carrito" element={<CarritoScreen/>}/>
 
+        <Route path="/register" element={<RegistroUsuarioApp />} />
+        <Route path="/productos" element={<ProductosScreen />} />
+        <Route path="*" element={<ErrorScreen />} />
       </Routes>
       <Footer />
     </BrowserRouter>
@@ -35,7 +39,3 @@ function App() {
 }
 
 export default App;
-
-
-
-

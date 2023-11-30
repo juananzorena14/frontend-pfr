@@ -1,0 +1,24 @@
+.contenedor{
+    display: flex;
+    justify-content: center;
+   
+  height: 100vh;
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3px;
+   
+}
+
+.padre {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+ }
+
+.imagen img{
+    height: 100%;
+    object-fit: contain;
+}

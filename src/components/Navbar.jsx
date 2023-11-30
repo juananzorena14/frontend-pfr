@@ -35,7 +35,7 @@ const Navbar = () => {
                   isActive ? "nav-link fw-bold" : "nav-link"
                 }
                 aria-current="page"
-                to="/pay"
+                to="/carrito"
               >
                 Pedidos
               </NavLink>
@@ -45,7 +45,7 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   isActive ? "nav-link fw-bold" : "nav-link"
                 }
-                to="/login"
+                to="/modal"
               >
                 Iniciar Sesión
               </NavLink>
