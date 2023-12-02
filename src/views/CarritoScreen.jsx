@@ -10,7 +10,7 @@ const Carrito = () => {
 
   useEffect(() => {
     const carritoGuardado = JSON.parse(localStorage.getItem("carrito")) || [];
-    setMiCarrito(arregloGuardado);
+    setMiCarrito(carritoGuardado);
   }, []);
 
   return (
@@ -33,7 +33,7 @@ const Carrito = () => {
                 </tr>
               </thead>
               <tbody>
-                {arregloGuardado.map((producto, index) => (
+                {miCarrito.map((producto, index) => (
                   <tr key={index}>
                     <td>{producto.nombre}</td>
                     <td>{producto.precio}</td>
