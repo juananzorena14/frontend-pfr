@@ -7,40 +7,33 @@ import "../css/landing.css";
 const LandingPage = () => {
   return (
     <Container className="contenedor">
-      <Row className="h-100">
-        <Col xs={12} md={6} className=" padre">
-          <div>
-
-          <h1 className="title text-center">
-            ¡Bienvenido a El Rincon del Sabor!
-          </h1>
-          <h4 className="text-center">
-            {" "}
-            Donde cada bocado es un viaje de sabores y cada visita es una
-            experiencia
-          </h4>
-          <p className="subtitle text-center">Explorá nuestro sitio web.</p>
-          <div className="boton">
-            <Link type="button" class="btn btn-dark" to="/productos">
-              Empezar ahora
-            </Link>
+      <Row className=" row div">
+        {/* <Col xs={12} md={6} className=" "> */}
+        {/* <div className="div"> */}
+          <div className=" col-md-6">
+            <h1 className="title text-center">
+              ¡Bienvenido a El Rincon del Sabor!
+            </h1>
+            <h4 className="text-center">
+              Donde cada bocado es un viaje de sabores y cada visita es una
+              experiencia
+            </h4>
+            <p className="subtitle text-center">Explorá nuestro sitio web.</p>
+            <div className="boton">
+              <Link type="button" class="btn btn-dark" to="/productos">
+                Empezar ahora
+              </Link>
+            </div>
           </div>
-          </div>
-        </Col>
-        
+          {/* </Col> */}
 
-        <Col xs={12} md={6}>
-          <div className="imagen">
+          {/* <Col xs={12} md={6} className=" "> */}
+          <div className="imagen col-md-6">
             <img src={portada} alt="Imagen" className="img-fluid" />
           </div>
-          <div className="imagen">
-            <img src={portada} alt="Imagen" className="img-fluid" />
-          </div>
-        </Col>
-       
-       
-        
-      
+        {/* </div> */}
+
+        {/* </Col> */}
       </Row>
     </Container>
   );
