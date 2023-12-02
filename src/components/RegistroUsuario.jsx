@@ -93,6 +93,31 @@ const RegistroUsuarioApp = () => {
                   />
                   <p className="text-danger">{errors.password?.message}</p>
                 </fieldset>
+                <fieldset className="col-12 ">
+                  <label htmlFor="direction-input" className="form-label">
+                    Dirección
+                  </label>
+                  <input
+                    type="text"
+                    id="direction-input"
+                    className="form-control"
+                    {...register("direction", {
+                      required: "Este campo es requerido",
+                      minLength: {
+                        value: 3,
+                        message: "Este campo tiene un mínimo de 3 caracteres",
+                      },
+                      maxLength: {
+                        value: 100,
+                        message: "Este campo tiene un máximo de 15 caracteres",
+                      },
+                    })}
+                    required
+                    minLength={3}
+                    maxLength={100}
+                  />
+                  <p className="text-danger">{errors.name?.message}</p>
+                </fieldset>
               </section>
               <div className="text-end">
                 <button

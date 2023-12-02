@@ -1,8 +1,8 @@
-const url = "https://rincondelsaborbd-dev-ssmt.4.us-1.fl0.io/";
+const url = "https://rincon-del-sabor-dev.onrender.com/api/productos";
 const token = JSON.parse(localStorage.getItem("token")) || null;
 
-const productsList = async (pagina) => {
-  const resp = await fetch(url + "?desde=" + pagina, {
+const productsList = async () => {
+  const resp = await fetch(url  ,{
     method: "GET",
     headers: {
       "Content-type": "application/json; charset=UTF-8",

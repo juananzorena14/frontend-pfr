@@ -8,6 +8,9 @@ import "../css/login.css";
 import Modal from "react-bootstrap/Modal"; //importación de React-Bootstrap
 
 const ModalLogin = ({ show, handleClose }) => {
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
   const navigate = useNavigate();
 
   const [loading, setLoading] = useState(false);
@@ -47,7 +50,7 @@ const ModalLogin = ({ show, handleClose }) => {
         <Modal.Title>Iniciar Sesion </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <div className="container-fluid fondo ">
+        <div className="container-fluid  ">
           <div className="row  d-flex vh-100 align-items-center">
             <div className="col-12 col-md ">
               <div className="card transparente">

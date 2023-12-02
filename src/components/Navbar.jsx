@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "../css/navbar.css";
 import imagenPortada from "../assets/descarga1.jpg"
+// import ModalLogin from "../components/ModalLogin"
 
 const Navbar = () => {
   return (
@@ -41,7 +42,7 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink
+              <NavLink 
                 className={({ isActive }) =>
                   isActive ? "nav-link fw-bold" : "nav-link"
                 }
