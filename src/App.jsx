@@ -27,10 +27,12 @@ function App() {
         /> */}
         <Route path="/" element={<LandingPage />} />
         <Route path="/pay" element={<CardBuyApp/>}/>
-        <Route path="/carrito" element={<CarritoScreen/>}/>
+        {/* <Route path="/carrito" element={<CarritoScreen/>}/> */}
 
         <Route path="/register" element={<RegistroUsuarioApp />} />
         <Route path="/productos" element={<ProductosScreen />} />
+        <Route path="/login" element={<LoginScreen />} />
+
         <Route path="*" element={<ErrorScreen />} />
       </Routes>
       <Footer />

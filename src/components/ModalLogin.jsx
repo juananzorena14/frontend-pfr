@@ -8,9 +8,7 @@ import "../css/login.css";
 import Modal from "react-bootstrap/Modal"; //importación de React-Bootstrap
 
 const ModalLogin = ({ show, handleClose }) => {
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+   
   const navigate = useNavigate();
 
   const [loading, setLoading] = useState(false);

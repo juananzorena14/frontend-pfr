@@ -26,9 +26,20 @@ const ProductosScreen = () => {
     setLoading(false);
   };
 
-  const agregarAlCarrito = ({producto}) => {
-    setCarrito([...carrito, producto]);
-  };
+
+    const agregarAlCarrito=(producto)=>{
+      const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+   
+      // Agrega el producto al arreglo.
+      carrito.push(producto);
+   
+      // Guarda el arreglo actualizado en la localStorage.
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+   }
+
+  
+
+
 // const confirmarCompra=()=> {
 //     // Mostrar un cuadro de diálogo con un mensaje y botones "Aceptar" y "Cancelar"
 //     const respuesta = confirm("¿Quieres seguir comprando?");
@@ -77,13 +88,13 @@ const ProductosScreen = () => {
                       alt={productosFiltrados.nombre}
                     />
                     <div className="card-body tarjeta">
-                      <h5 className="card-title">{producto.nombre}</h5>
-                      <p className="card-text">{producto.descripcion}</p>
+                      <h5 className="card-title">{productosFiltrados.nombre}</h5>
+                      <p className="card-text">{productosFiltrados.descripcion}</p>
                     </div>
                     <div>
-                      <Link  onClick={agregarAlCarrito} to="/pay" className="btn btn-success  btn-lg ms-4">
+                      <button onClick={agregarAlCarrito} to="/pay" className="btn btn-success  btn-lg ms-4">
                         Comprar
-                      </Link>
+                      </button>
                     </div>
                   </div>
                 </div>
