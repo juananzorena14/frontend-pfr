@@ -40,7 +40,7 @@ const ProductosScreen = () => {
   };
 
   return (
-    <div className="container-fluid">
+    <div className="container">
       <div className="row d-block ">
         {loading ? (
           <div className="col">
