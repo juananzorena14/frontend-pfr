@@ -9,6 +9,8 @@ import "../css/carrito.css";
 
 const Carrito = () => {
   const [miCarrito, setMiCarrito] = useState([]);
+  const [borrar, setBorrar] = useState([]);
+
   console.log(miCarrito);
 
   useEffect(() => {
@@ -16,14 +18,15 @@ const Carrito = () => {
     setMiCarrito(carritoGuardado);
   }, []);
 
-  const eliminar =(producto)=>{
-    miCarrito.splice(producto)
-    localStorage.setItem("carrito",JSON.stringify(miCarrito))
-  }
+  const eliminar = (index) => {
+    miCarrito.splice(index,1);
+    localStorage.setItem("carrito", JSON.stringify(miCarrito));
+    setBorrar(miCarrito);
+  };
 
   return (
     <div className="container-fluid ">
-      <div className="row  d-block">
+      <div className="">
         <div>
           {miCarrito.length === 0 ? (
             <div className="carrito ">
@@ -42,7 +45,6 @@ const Carrito = () => {
                       <th>Producto</th>
                       <th>Descripción</th>
                       <th>Precio</th>
-
                     </tr>
                   </thead>
                   <tbody>
@@ -52,26 +54,21 @@ const Carrito = () => {
                         <td>{producto.description}</td>
                         <td>{producto.price}</td>
                         <Button
-                      onClick={() => eliminar(producto)}
-                      className="btn btn-success btn-lg"
-                      >
-                      X
-                    </Button>
-
+                          onClick={() => eliminar(producto)}
+                          className="btn btn-success btn-lg"
+                        >
+                          X
+                        </Button>
                       </tr>
                     ))}
                   </tbody>
                 </Table>
               </div>
               <div className="div">
-                <Link to="/pay">
-                  <Button
-                    onClick={() => eliminar(producto)}
-                    className="btn btn-success btn-lg"
-                  >
-                    Finalizar Compra
-                  </Button>
-                </Link>
+                <Link className='btn btn-success mb-2' to="/pay">Finalizar Compra</Link>
+              </div>
+              <div className="div">
+                <Link className='btn btn-success mb-2' to="/main">Agregar más</Link>
               </div>
             </div>
           )}
