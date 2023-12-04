@@ -6,6 +6,7 @@ import {
   formatCVC,
   formatExpirationDate,
 } from "../helpers/util";
+import '../css/login.css'
 
 const CardBuyApp = () => {
   const [showMessage, setShowMessage] = useState(false);
@@ -51,7 +52,10 @@ const CardBuyApp = () => {
 
   return (
     <>
-      <div className="col-12 col-md-4 offset-md-2 mb-3">
+    <div className="container-fluid fondo">
+      <div className="row d-flex  align-items-center">
+
+      <div className="col-12 col-md offset mb-3">
         <Cards
           number={state.number}
           expiry={state.expiry}
@@ -60,7 +64,7 @@ const CardBuyApp = () => {
           focused={state.focus}
         />
       </div>
-      <div className="col-12 col-md-4">
+      <div className="col-12 col-md">
         <form onSubmit={handleSubmit}>
           <input
             type="tel"
@@ -118,6 +122,8 @@ const CardBuyApp = () => {
           </div>
         )}
       </div>
+      </div>
+    </div>
     </>
   );
 };

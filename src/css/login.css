@@ -1,7 +1,3 @@
-#registerForm {
-    align-self: center;
-    justify-self: center;
-}
 .fondo{
     display: flex;
     justify-content: center;
@@ -14,18 +10,8 @@
 
 
 }
-.publicidad{
-
-    max-height: 400px;
-}
-
-.publicidad img{
-    object-fit: contain;
-
-}
 
 .transparente{
-    
     opacity: 0.8;
     -moz-opacity: 0.8;
     filter: alpha(opacity=80);
@@ -33,20 +19,11 @@
    
     }
     .text{
-        font-weight: bolt;
-        
-        color:black
-      }
-
-    label{
-        color: black;
-        font-weight:600;
+      font-weight: bolt;
+      
+      color:black
     }
-    
-
-/* 
-    @media screen and (max-width: 390px) {
-        .publicidad {
-          display: none;
-        }
-      } */
+    label{
+      color: black;
+      font-weight:600;
+  }
