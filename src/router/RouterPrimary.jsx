@@ -17,6 +17,7 @@ const RouterPrimary = () => {
         <Route path="/register" element={<RegistroUsuarioApp />} />
         <Route path="/login" element={<LoginScreen />} />
         
+        
     </Routes>
   )
 }

@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { productsList } from "../api/productsApi";
-// import '../css/tarjetasPrincipal'
+import { Button } from "react-bootstrap";
+import '../css/tarjetasPrincipal.css'
 
 const ProductosScreen = () => {
   const [producEstado, setProducEstado] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const { categoria } = useParams(); //categoria = bebidas
-console.log(categoria)
+  console.log(categoria);
   useEffect(() => {
     traerProductosFiltrados();
   }, []);
@@ -31,11 +32,11 @@ console.log(categoria)
 
     // Agrega el producto al arreglo.
     carrito.push(producto);
-    console.log(carrito)
+    console.log(carrito);
 
     // Guarda el arreglo actualizado en la localStorage.
     localStorage.setItem("carrito", JSON.stringify(carrito));
-    console.log(carrito)
+    console.log(carrito);
   };
 
   return (
@@ -50,22 +51,27 @@ console.log(categoria)
             {producEstado.length > 0 ? (
               producEstado.map((producto) => (
                 <div className="col" key={producto._id}>
-                 
                   <div className="card h-100 tarjeta">
-                <img
-                  src={producto.img}
-                  className="card-img img-cards"
-                  alt={producto.name}
-                />
-                <div className="card-body ">
-                  <h5 className="card-title">{producto.name}</h5>
-                  <p>{producto.description}</p>
-                  
-                </div>
-                <Link onClick={agregarAlCarrito} to="/carrito" className="btn btn-success  btn-lg ">
-                        Comprar
-                      </Link>
-              </div>
+                    <img
+                      src={producto.img}
+                      className="card-img img-cards"
+                      alt={producto.name}
+                    />
+                    <div className="card-body ">
+                      <h5 className="card-title">{producto.name}</h5>
+                      <p>{producto.description}</p>
+                      <p className="fs-4">{producto.price}</p>
+
+                    </div>
+                      <Link to="/carrito">
+                    <Button
+                      onClick={() => agregarAlCarrito(producto)}
+                      className="btn btn-success btn-lg"
+                      >
+                      Comprar
+                    </Button>
+                        </Link>
+                  </div>
                 </div>
               ))
             ) : (
