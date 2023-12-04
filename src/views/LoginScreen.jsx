@@ -42,16 +42,16 @@ const LoginScreen = () => {
                 onSubmit={handleSubmit(inicioSesion)}
                 className="bg-light text-dark p-3 rounded w-100 "
               >
-                <h1 className="text-center">Inicio de sesión</h1>
-                <section className="row">
+                <h1 className="text-center text">Inicio de sesión</h1>
+                <section className="row ">
                   <fieldset className="col-12 ">
-                    <label htmlFor="Email-input" className="form-label">
+                    <label htmlFor="Email-input" className="form-label text">
                       Correo
                     </label>
                     <input
                       type="email"
                       id="Email-input"
-                      className="form-control"
+                      className="form-control text"
                       {...register("email", {
                         required: "Este campo es requerido",
                       })}

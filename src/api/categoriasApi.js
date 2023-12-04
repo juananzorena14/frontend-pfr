@@ -1,4 +1,4 @@
-const url = "https://backend-62i.onrender.com/api/categorias";
+const url = "https://rincon-del-sabor-dev.onrender.com/api/categorias";
 
 const categoryList = async () => {
   const resp = await fetch(url, {

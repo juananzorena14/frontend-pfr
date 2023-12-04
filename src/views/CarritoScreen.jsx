@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useEffect } from "react";
 import Table from "react-bootstrap/Table";
 
 import "../css/carrito.css";
@@ -20,7 +21,7 @@ const Carrito = () => {
           {miCarrito.length === 0 ? (
             <div className=" carrito">
               <h1>Carrito vacio</h1>
-              <Link type="button" className="btn btn-dark" to="/productos">
+              <Link type="button" className="btn btn-dark" to="/main">
                 Comprar
               </Link>
             </div>

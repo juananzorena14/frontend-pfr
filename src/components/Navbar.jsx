@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "../css/navbar.css";
 import imagenPortada from "../assets/descarga1.jpg"
-import ModalLogin from "../components/ModalLogin"
 
 const Navbar = () => {
     // const [show, setShow] = useState(false);
@@ -16,13 +15,13 @@ const Navbar = () => {
           className={({ isActive }) =>
             isActive ? "nav-link fw-bold" : "nav-link"
           }
-          to="/"
+          to="/main"
         ><div className="imgLogo">
           <img src={imagenPortada} alt="portada" />
           </div>
         </NavLink>
         <button
-          className="navbar-toggler light "
+          className="navbar-toggler "
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -37,7 +36,7 @@ const Navbar = () => {
             <li className="nav-item">
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "nav-link fw-bold" : "nav-link"
+                  isActive ? " fw-bold" : "nav-link"
                 }
                 aria-current="page"
                 to="/carrito"
@@ -48,8 +47,9 @@ const Navbar = () => {
             <li className="nav-item">
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "nav-link fw-bold" : "nav-link"
-                } to='/register'
+                  isActive ? " fw-bold" : "nav-link"
+                } 
+                to='/register'
               >
                 Registrarse
               </NavLink>
@@ -57,7 +57,7 @@ const Navbar = () => {
             <li className="nav-item">
               <NavLink 
                 className={({ isActive }) =>
-                  isActive ? "nav-link fw-bold" : "nav-link"
+                  isActive ? " fw-bold" : "nav-link"
                 }
                 to="/login"
               >

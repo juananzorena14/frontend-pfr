@@ -25,15 +25,15 @@ const RegistroUsuarioApp = () => {
             <form
               noValidate
               onSubmit={handleSubmit(newUser)}
-              className="bg-light text-dark p-3 rounded w-100 d-flex flex-column"
+              className="bg-light text-dark  p-3 rounded w-100 d-flex flex-column"
               id="registerForm"
             >
-              <h1 className="text-center align-self-center">
+              <h1 className="text-center align-self-center text">
                 Registro de Usuario
               </h1>
-              <section className="row">
+              <section className="row ">
                 <fieldset className="col-12 ">
-                  <label htmlFor="nameUser-input" className="form-label">
+                  <label htmlFor="nameUser-input" className="form-label ">
                     Nombre completo
                   </label>
                   <input

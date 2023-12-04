@@ -18,3 +18,12 @@
     -khtml-opacity: 0.8;
    
     }
+    .text{
+      font-weight: bolt;
+      
+      color:black
+    }
+    label{
+      color: black;
+      font-weight:600;
+  }
