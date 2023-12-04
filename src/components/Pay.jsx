@@ -52,8 +52,8 @@ const CardBuyApp = () => {
 
   return (
     <>
-    <div className="container-fluid fondo">
-      <div className="row d-flex  align-items-center">
+    <div className="container-fluid fondo container">
+      <div className="row  row d-flex  align-items-center">
 
       <div className="col-12 col-md offset mb-3">
         <Cards
